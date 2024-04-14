@@ -1,0 +1,25 @@
+table{
+    border-collapse: collapse;
+    width: 100%;
+        
+  }
+  td,
+  th {
+    border: 3px solid black;
+    padding: 30px 10px ;
+    text-align: center;
+  
+  }
+  .image1{
+    background-image: url('https://pm1.aminoapps.com/6519/8ad36ceaf3228b7a74fde3b4926cb69bf30dbc4d_hq.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+width: 30vw;
+  }
+  .image2{
+    background-image: url('https://wallpapers.com/images/hd/sad-aesthetic-tumblr-dark-random-objects-zpjmj7eooqfdrrso.jpg');
+    background-size: cover;
+    background-position: center;
+width: 30vw;
+  }

@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+header{
+    background-image:url('https://marketplace.canva.com/EAFXKePZeWU/1/0/1131w/canva-light-brown-white-simple-elegant-indonesian-traditional-batik-culture-festival-poster-ZRpC5LfcfmA.jpg');
+    background-size: cover;
+    background-position: bottom;
+    width: 100vw;
+    height: 7vh;
+}
+header h1{
+/* text-align: center; */
+justify-content: center;
+display: flex;
+align-items: center;
+}
+/* border: 2px solid; */
+.form{
+   display: grid;
+   justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+label{
+    margin: 10px 20px;
+    
+}
+
+input{
+    padding: 10px;
+    /* width: 15vw; */
+}
+select{
+    padding: 10px;
+}
+textarea{
+    resize: none;
+    padding: 10px ;
+    width:40vw;
+    margin-left: 20px;
+}
+span{
+    color: red;
+}
+
+.button{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    
+}
+.submit{
+    font-weight: bolder;
+    background-color: #1877f2;
+    border: none;
+    color: white;
+    border-radius:3px 3px 3px 3px ;
+    padding: 8px 20px;
+}
+.reset{
+    border-radius:3px 3px 3px 3px ;
+    font-weight: bolder;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+}
+
+.ack label{
+    margin: 10px 50px ;
+
+
+}
+.ack input{
+    margin: 20px 10px;
+    /* width: 20vw; */
+}
