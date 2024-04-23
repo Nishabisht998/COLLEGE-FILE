@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            height: 30vh;
+
+        }
+
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+
+        th {
+
+            background-image: url('https://t4.ftcdn.net/jpg/05/13/77/31/360_F_513773104_G7Pin2bxWwpMAWqI5MIvrSnWDpYs80WN.jpg');
+            background-position: bottom;
+            background-size: cover;
+            height: 56vh;
+
+
+        }
+        #document {
+
+    width: 800px; 
+ overflow-y: hidden;
+    margin: 20px auto;
+    background-color: white;
+   
+  }
+
+  /* Hide the document by default */
+  #document.hidden {
+    display: none;
+  }
+
+        #openButton {
+   
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+
+  }
+
+  /* File input styles */
+  #fileInput {
+    display: none;
+  }
+
+    </style>
+</head>
+
+<body>
+    <table>
+        <th colspan="2">
+
+        </th>
+
+        <tr>
+            <td>
+               <button class="button" id="openButton">
+                click me
+               </button>
+               <input type="file" accept=".pdf" id="fileInput">
+            </td>
+            <td>
+                <div id="document" class="hidden">
+                    <iframe id="pdfViewer" width="100%" height="100%" frameborder="0"></iframe>
+                  </div>
+
+            </td>
+        </tr>
+
+
+    </table>
+    <script>
+        const openButton = document.getElementById('openButton');
+        const fileInput = document.getElementById('fileInput');
+        const documentContainer = document.getElementById('document');
+        const pdfViewer = document.getElementById('pdfViewer');
+      
+        function toggleDocument() {
+          documentContainer.classList.toggle('hidden');
+        }
+      
+        function handlePDFUpload(event) {
+          const file = event.target.files[0];
+          const fileURL = URL.createObjectURL(file);
+          pdfViewer.src = fileURL;
+          toggleDocument(); // Show document container
+        }
+      
+        openButton.addEventListener('click', function() {
+          fileInput.click(); // Trigger file input click
+        });
+      
+        fileInput.addEventListener('change', handlePDFUpload);
+      </script>
+
+</body>
+
+</html>
